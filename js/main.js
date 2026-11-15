@@ -245,3 +245,34 @@ document.addEventListener('submit', (e) => {
     cerrarModal();
   }
 });
+
+// Agrega esta función dentro del evento DOMContentLoaded en js/main.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  inicializarHeaderScroll();
+  inicializarScrollReveal();
+  inicializarPaginaCatalogo();
+  inicializarModalHTML();
+  inicializarMenuMovil(); // <-- AGREGAR ESTA LÍNEA
+});
+
+// Función para abrir/cerrar el menú hamburguesa en celulares
+function inicializarMenuMovil() {
+  const menuBtn = document.getElementById('menuToggleBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  if (!menuBtn || !navLinks) return;
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Cerrar el menú al hacer clic en cualquier enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}

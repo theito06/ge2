@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locales - Aroma & Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header id="header">
+    <a href="index.html" class="logo">AROMA & CO.</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="locales.html" class="active">Sucursales</a></li>
+    </ul>
+    <button class="cart-icon-btn" id="openCartBtn">
+      🛒 <span class="cart-count" id="cartCountBadge">0</span>
+    </button>
+  </header>
+
+  <section class="section-container" style="padding-top:140px;">
+    <div class="section-header reveal">
+      <p>Ven a visitarnos</p>
+      <h2>Nuestras Sucursales</h2>
+    </div>
+
+    <div class="product-grid" style="margin-bottom:60px;">
+      <div class="product-card reveal">
+        <div class="img-container">
+          <!-- ESPACIO PARA TU IMAGEN DE SUCURSAL 1 -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3YsLdrAKBuOm2CsvUCatXnL6d8pBUjSJZz-x4D8n8bB9tBV1BwqMTCCg&s=10" alt="Sucursal Centro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      </div>
+        <div class="product-info">
+          <h3 class="product-title">Sucursal El Crucero</h3>
+          <p class="product-desc">XMRR+C69, Carr. Panamericana, El Crucero<br>Lun a Sáb: 7:00 AM - 9:00 PM</p>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="img-container">
+          <!-- ESPACIO PARA TU IMAGEN DE SUCURSAL 2 -->
+          <img src="https://i.pinimg.com/originals/90/18/57/90185735c4648b27f833b4ad12ae0d30.jpg" alt="Sucursal Norte" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Sucursal Altamita</h3>
+          <p class="product-desc">Del edificio pellas 1 cuadra arriba, cuadra 1 y ½ al sur, 14034<br>Mar a Dom: 8:00 AM - 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Aroma & Co.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

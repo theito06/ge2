@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pedido - Aroma & Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header id="header">
+    <a href="index.html" class="logo">AROMA & CO.</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+    </ul>
+    <button class="cart-icon-btn" id="openCartBtn">
+      🛒 <span class="cart-count" id="cartCountBadge">0</span>
+    </button>
+  </header>
+
+  <section class="section-container" style="padding-top:140px; max-width:800px; margin:0 auto;">
+    <div class="section-header reveal">
+      <p>Procesar Pago</p>
+      <h2>Resumen de tu Orden</h2>
+    </div>
+
+    <div class="reveal" style="background:var(--bg-card); padding:30px; border-radius:20px; border:1px solid rgba(255,255,255,0.05);">
+      <form id="checkoutForm">
+        <div class="modal-group">
+          <label>Nombre Completo:</label>
+          <input type="text" class="modal-select" required placeholder="Tu nombre">
+        </div>
+        <div class="modal-group">
+          <label>Dirección de Envío / Retiro:</label>
+          <input type="text" class="modal-select" required placeholder="Tu dirección exacta">
+        </div>
+        <div class="modal-group">
+          <label>Método de Pago:</label>
+          <select class="modal-select">
+            <option>Tarjeta de Crédito / Débito</option>
+            <option>Efectivo contra entrega</option>
+            <option>Transferencia Electrónica</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-cta" style="width:100%; margin-top:20px;">Confirmar y Pagar</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('¡Gracias por tu pedido en Aroma & Co.! Nos pondremos en contacto contigo.');
+      localStorage.removeItem('carritoCafeteria');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
